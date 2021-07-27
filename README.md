@@ -6,7 +6,9 @@
 <img src= "https://user-images.githubusercontent.com/79985009/127145832-32347d1e-4d01-4dfa-abdb-1f4e67c4eaa0.png" width="60%" height="30%">
 
 ---
-
+Requirements
+- requirements.txt
+---
 #### HOW to runserver?
 - 가상환경 생성
 ~~~
