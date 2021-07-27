@@ -10,7 +10,7 @@
 #### HOW to runserver?
 - 가상환경 생성
 ~~~
-python -m venv myvenv  - 원하는 가상환경 이름을 성정하면 된다.
+python -m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
 ~~~
 
 - 가상환경 실행
