@@ -35,8 +35,6 @@ cd men_skin
 
 `python` manage.py runserver
 <br>
-`or`
-<br>
 `python` men_skin/manage.py runserver
 
 
