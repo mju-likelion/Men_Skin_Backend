@@ -22,7 +22,7 @@ source myvenv/bin/activate  # Mac
 ```
 
 - 패키지 설치
-```pip
+```pip install -r requirments.txt
 pip install -r requirments.txt
 ```
 
