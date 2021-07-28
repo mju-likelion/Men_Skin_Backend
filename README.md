@@ -22,9 +22,9 @@ source myvenv/bin/activate  # Mac
 ```
 
 - 패키지 설치
-~~~
+```pip
 pip install -r requirments.txt
-~~~
+```
 
 - 프로젝트 생성
 ~~~
