@@ -12,32 +12,18 @@ Requirements
 #### HOW to runserver?
 - 가상환경 생성
 
-`python` -m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
+python -m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
 
 - 가상환경 실행
-```shell
+
 source myvenv/Scripts/activate  # Windows
 source myvenv/bin/activate  # Mac
-```
-
-- 패키지 설치
-
-`pip` install -r requirments.txt
-
 
 - 프로젝트 생성
-```shell
+shell
 django-admin startproject men_skin
 cd men_skin
-```
 
 - 서버 실행
-```
+
 python manage.py runserver
-
-python men_skin/manage.py runserver
-```
-
-
-
-
