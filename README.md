@@ -21,9 +21,9 @@ source myvenv/bin/activate  # Mac
 ```
 
 - 패키지 설치
-~~~
+
 `pip` install -r requirments.txt
-~~~
+
 
 - 프로젝트 생성
 ```shell
@@ -32,11 +32,11 @@ cd men_skin
 ```
 
 - 서버 실행
-~~~
-python manage.py runserver
+
+`python` manage.py runserver
 `or`
-python men_skin/manage.py runserver
-~~~
+`python` men_skin/manage.py runserver
+
 
 
 
