@@ -20,9 +20,9 @@ python -m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
 source myvenv/Scripts/activate  # Windows
 ~~~
 
-- 장고 설치
+- 패키지 설치
 ~~~
-pip install django
+pip install 0r requirments.txt
 ~~~
 
 - 프로젝트 생성
@@ -34,6 +34,8 @@ cd men_skin
 - 서버 실행
 ~~~
 python manage.py runserver
+or
+python men_skin/manage.py runserver
 ~~~
 
 
