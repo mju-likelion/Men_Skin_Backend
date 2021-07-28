@@ -22,6 +22,7 @@ source myvenv/bin/activate
 ~~~
 
 - 패키지 설치
+
 ```pip``` install -r requirements.txt
 
 
@@ -34,5 +35,6 @@ cd men_skin
 - 서버 실행
 ~~~
 python manage.py runserver
+
 python mens_skin/manage.py/runserver
 ~~~
