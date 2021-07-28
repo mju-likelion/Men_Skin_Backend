@@ -13,11 +13,12 @@ Requirements
 - 가상환경 생성
 ~~~
 python -m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
+<span style="color:yellow">노란 글씨입니다.</span>
 ~~~
 
 - 가상환경 실행
 ~~~
-<span style="color:red">붉은 색</span> source myvenv/Scripts/activate  # Windows
+source myvenv/Scripts/activate  # Windows
 source myvenv/bin/activate  # Mac
 ~~~
 
