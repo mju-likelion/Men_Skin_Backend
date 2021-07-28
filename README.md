@@ -33,9 +33,7 @@ cd men_skin
 
 - 서버 실행
 `python` manage.py runserver
-<br>
 or
-<br>
 `python` men_skin/manage.py runserver
 
 
