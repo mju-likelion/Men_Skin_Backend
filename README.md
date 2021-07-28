@@ -17,7 +17,7 @@ python -m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
 - 가상환경 실행
 
 source myvenv/Scripts/activate  # Windows
-source myvenv/bin/activate  # Mac
+
 
 - 프로젝트 생성
 shell
