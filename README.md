@@ -36,8 +36,8 @@ source myvenv/bin/activate # Mac
 - 프로젝트 생성
 
 ```shell
-django-admin startproject men_skin
-cd men_skin
+django-admin startproject mens_skin
+cd mens_skin
 ```
 
 - 서버 실행
