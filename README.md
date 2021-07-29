@@ -36,8 +36,8 @@ source myvenv/bin/activate # Mac
 - 프로젝트 생성
 
 ```shell
-django-admin startproject mens
-cd mens
+django-admin startproject mens_skin
+cd mens_skin
 ```
 
 - 서버 실행
@@ -45,5 +45,5 @@ cd mens
 ```
 python manage.py runserver
 
-python mens/manage.py/runserver
+python mens_skin/manage.py/runserver
 ```
