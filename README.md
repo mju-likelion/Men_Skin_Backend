@@ -14,9 +14,9 @@ Men_Skin_Backend는 백엔드 프레임워크 Django와
 
 
 
-
-`python` -m venv myvenv # 원하는 가상환경 이름을 설정하면 된다.
-
+```
+python -m venv myvenv # 원하는 가상환경 이름을 설정하면 된다.
+```
 
 
 - 가상환경 실행
@@ -28,9 +28,9 @@ source myvenv/bin/activate # Mac
 
 - 패키지 설치
 
-
-`pip` install -r requirements.txt
-
+```
+pip install -r requirements.txt
+```
 
 
 - 프로젝트 생성
