@@ -1,40 +1,49 @@
-## Men_Skin_Backend
-- Men_Skin_Backend는 백엔드 프레임워크 Django와 <br>
-  오픈소스 데이터베이스인 Mysql을 사용하여 데이터베이스를 구축한다.
+# Men_Skin_Backend
 
-### DB Schema(v3)
-<img src= "https://user-images.githubusercontent.com/79985009/127145832-32347d1e-4d01-4dfa-abdb-1f4e67c4eaa0.png" width="60%" height="30%">
+Men_Skin_Backend는 백엔드 프레임워크 Django와
+오픈소스 데이터베이스인 Mysql을 사용하여 데이터베이스를 구축한다.
 
----
-Requirements
+
+## Requirements
+
 - requirements.txt
----
-#### HOW to runserver?
+
+## HOW to runserver?
+
 - 가상환경 생성
 
-``` python``` m venv myvenv  - 원하는 가상환경 이름을 설정하면 된다.
 
+```shell
+
+python -m venv myvenv # 원하는 가상환경 이름을 설정하면 된다.
+
+```
 
 - 가상환경 실행
-~~~
+
+```shell
 source myvenv/Scripts/activate  # Windows
-source myvenv/bin/activate
-~~~
+source myvenv/bin/activate # Mac
+```
 
 - 패키지 설치
 
-```pip``` install -r requirements.txt
+```shell
+pip install -r requirements.txt
+```
 
 
 - 프로젝트 생성
-~~~
+
+```shell
 django-admin startproject men_skin
 cd men_skin
-~~~
+```
 
 - 서버 실행
-~~~
+
+```
 python manage.py runserver
 
 python mens_skin/manage.py/runserver
-~~~
+```
