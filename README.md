@@ -36,8 +36,8 @@ pip install -r requirements.txt
 - 프로젝트 생성
 
 ```shell
-django-admin startproject mens_skin
-cd mens_skin
+django-admin startproject mens
+cd mens
 ```
 
 - 서버 실행
@@ -45,5 +45,5 @@ cd mens_skin
 ```
 python manage.py runserver
 
-python mens_skin/manage.py/runserver
+python mens/manage.py/runserver
 ```
