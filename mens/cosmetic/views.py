@@ -6,9 +6,6 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .permissions import IsOwnerOrReadOnly 
 # Create your views here.
-def home(request):
-    
-    return render(request, 'home.html')
 
 class UserCreate(generics.CreateAPIView):
     queryset = User.objects.all()

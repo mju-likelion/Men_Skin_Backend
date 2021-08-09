@@ -33,4 +33,3 @@ class RankSerializer(serializers.ModelSerializer):
     class Meta:
         model = Rank
         fields = '__all__'
-        
