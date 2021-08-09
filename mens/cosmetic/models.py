@@ -35,7 +35,6 @@ class User(AbstractBaseUser):
     username = models.CharField(max_length=30, unique=True )
     age = models.PositiveSmallIntegerField(null=True)
     skin_type = models.CharField(choices=TYPE_CHOICES, max_length=255)
-
     objects = UserManager() # 사용자 정보를 관리하는 클래스는 지정한다. 
     USERNAME_FIELD = 'email' # 사용자 이름으로 사용될 필드의 이름을 지정한다. # 사용자 PK 값을 가져오기위한 함수 
     REQUIRED_FIELDS = ['username']
