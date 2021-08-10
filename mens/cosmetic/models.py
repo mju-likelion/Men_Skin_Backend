@@ -74,7 +74,8 @@ class Comment(models.Model):
 class Rank(models.Model):
     TYPE_CHOICES =  [('선케어','선케어'),('스킨케어','스킨케어'),('색조화장','색조화장'),('향수','향수'),]
     name = models.CharField(max_length=500)
-    url = models.CharField(max_length=300)
+    image_url = models.CharField(max_length=300)
+    product_url = models.CharField(max_length=300)
     brand = models.CharField(max_length=100)
     price = models.PositiveIntegerField()
     type = models.CharField(choices=TYPE_CHOICES, max_length=255)
