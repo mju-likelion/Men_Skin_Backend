@@ -16,22 +16,37 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 import my_settings
-
+from dj_database_url import parse as dburl
+from decouple import config
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = my_settings.SECRET_KEY
-DATABASES = my_settings.DATABASES
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = config('DEBUG', default=False, cast=bool)
+# KEY = config('DATABASES_URL')
+DATABASES = {
+    'default': {
+        'ENGINE': config('ENGINE'),
+        'NAME': config('NAME'),
+        'USER': config('USER'),                         #root 유저(기본값) 사용
+        'PASSWORD': config('PASSWORD'),
+        'HOST': config('HOST'),
+        'PORT': config('PORT'), 
+    }
+}
+engine = config('ENGINE')
+# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = config('SECRET_KEY')
+# # cast=bool 이 없으면 False 를 문자열로 인식하게됨.
+# DEBUG = env('DEBUG', default=False, cast=bool)
+ALLOWED_HOSTS = ['*'] 
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'skin.urls'
@@ -72,7 +88,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'skin.wsgi.application'
 
-
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
