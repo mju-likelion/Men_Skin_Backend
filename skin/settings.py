@@ -22,6 +22,8 @@ from decouple import config
 # SECURITY WARNING: keep the secret key used in production secret!
 
 DEBUG = config('DEBUG', default=False, cast=bool)
+
+DATABASE_URL = config('CLEARDB_DATABASE_URL')
 # KEY = config('DATABASES_URL')
 DATABASES = {
     'default': {
@@ -33,7 +35,6 @@ DATABASES = {
         'PORT': config('PORT'), 
     }
 }
-engine = config('ENGINE')
 # SECURITY WARNING: don't run with debug turned on in production!
 SECRET_KEY = config('SECRET_KEY')
 # # cast=bool 이 없으면 False 를 문자열로 인식하게됨.
