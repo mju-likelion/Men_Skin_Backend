@@ -32,7 +32,7 @@ DATABASES = {
         'USER': config('USER'),                         #root 유저(기본값) 사용
         'PASSWORD': config('PASSWORD'),
         'HOST': config('HOST'),
-        'PORT': config('PORT'), 
+        'PORT': int(config('PORT'), )
     }
 }
 # SECURITY WARNING: don't run with debug turned on in production!
