@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,7 +31,7 @@ DATABASES = {
         'USER': config('USER'),                         #root 유저(기본값) 사용
         'PASSWORD': config('PASSWORD'),
         'HOST': config('HOST'),
-        'PORT': int(config('PORT'), )
+        'PORT': '3306', 
     }
 }
 # SECURITY WARNING: don't run with debug turned on in production!

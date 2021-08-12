@@ -29,9 +29,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user = self.request.user)
 
-class RankViewSet(viewsets.ModelViewSet):
+class RankViewSet(viewsets.ReadOnlyModelViewSet):
     authentication_classes = [BasicAuthentication, SessionAuthentication]
-    permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
     queryset = Rank.objects.all()
     serializer_class = RankSerializer
-

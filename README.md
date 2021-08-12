@@ -3,7 +3,6 @@
 Men_Skin_Backend는 백엔드 프레임워크 Django와
 오픈소스 데이터베이스인 Mysql을 사용하여 데이터베이스를 구축한다.
 
-
 ## Requirements
 
 - requirements.txt
@@ -12,12 +11,9 @@ Men_Skin_Backend는 백엔드 프레임워크 Django와
 
 - 가상환경 생성
 
-
-
 ```
 python -m venv myvenv # 원하는 가상환경 이름을 설정하면 된다.
 ```
-
 
 - 가상환경 실행
 
@@ -31,7 +27,6 @@ source myvenv/bin/activate # Mac
 ```
 pip install -r requirements.txt
 ```
-
 
 - 프로젝트 생성
 
