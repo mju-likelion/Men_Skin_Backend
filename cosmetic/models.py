@@ -32,7 +32,7 @@ class UserManager(BaseUserManager):
             email,
             password = password,
             username= username,
-            age = 25,
+            age = 22,
             skin_type = '건성'
          )
         user.is_admin = True
