@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:$PORT mens-skin:app
+web: gunicorn skin.wsgi --log-file -
