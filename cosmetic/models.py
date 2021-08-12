@@ -27,6 +27,18 @@ class UserManager(BaseUserManager):
 
         return user # 일반 사용자 생성 
 
+    def create_superuser(self, email, password, username):
+        user = self.create_user(
+            email,
+            password = password,
+            username= username,
+            age = 27,
+            skin_type = '건성'
+         )
+        user.is_admin = True
+        user.save(using=self._db)  
+        return user
+
 class User(AbstractBaseUser): 
     TYPE_CHOICES =  [('건성','건성'),('지성','지성'),('복합성','복합성'),('중성','중성'),]
     id = models.BigAutoField(primary_key=True) 
