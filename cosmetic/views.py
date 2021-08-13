@@ -16,6 +16,9 @@ class UserCreate(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+    def perform_create(self, serializer):
+        serializer.save(user = self.request.user)
+
 @method_decorator(csrf_exempt,name='dispatch')
 class BoardViewSet(viewsets.ModelViewSet):
     authentication_classes = [BasicAuthentication, SessionAuthentication]
