@@ -6,9 +6,10 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from .permissions import IsOwnerOrReadOnly 
 from django.views.decorators.csrf import csrf_exempt
-
+from django.utils.decorators import method_decorator
 # Create your views here.
-@csrf_exempt
+
+@method_decorator(csrf_exempt,name='dispatch')
 class UserCreate(generics.CreateAPIView):
     authentication_classes = (SessionAuthentication, BasicAuthentication)
     permission_classes = (IsAuthenticated)
