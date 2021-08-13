@@ -3,7 +3,7 @@ from .serializers import BoardSerializer, UserSerializer, CommentSerializer, Ran
 from .models import Board, User, Comment, Rank
 from rest_framework import generics, viewsets
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from .permissions import IsOwnerOrReadOnly 
 from django.views.decorators.csrf import csrf_exempt
 from django.utils.decorators import method_decorator
@@ -11,6 +11,8 @@ from django.utils.decorators import method_decorator
 
 @method_decorator(csrf_exempt,name='dispatch')
 class UserCreate(generics.CreateAPIView):
+    authentication_classes = (SessionAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated)
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
