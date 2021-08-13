@@ -6,17 +6,15 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .permissions import IsOwnerOrReadOnly 
 from django.views.decorators.csrf import csrf_exempt
-
+from django.utils.decorators import method_decorator
 # Create your views here.
 
-@csrf_exempt
-@staticmethod
+@method_decorator(csrf_exempt,name='dispatch')
 class UserCreate(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-@csrf_exempt
-@staticmethod
+@method_decorator(csrf_exempt,name='dispatch')
 class BoardViewSet(viewsets.ModelViewSet):
     authentication_classes = [BasicAuthentication, SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
@@ -25,9 +23,7 @@ class BoardViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user = self.request.user)
-
-@csrf_exempt
-@staticmethod
+@method_decorator(csrf_exempt,name='dispatch')
 class CommentViewSet(viewsets.ModelViewSet):
     authentication_classes = [BasicAuthentication, SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
