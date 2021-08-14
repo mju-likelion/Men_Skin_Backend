@@ -19,7 +19,7 @@ class UserCreate(generics.CreateAPIView):
     def perform_create(self, serializer):
         serializer.save(user = self.request.user)
 
-
+@method_decorator(csrf_exempt,name='dispatch')
 class BoardViewSet(viewsets.ModelViewSet):
     authentication_classes = [BasicAuthentication, SessionAuthentication]
     permission_classes = [IsAuthenticatedOrReadOnly,IsOwnerOrReadOnly]
