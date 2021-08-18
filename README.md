@@ -26,13 +26,7 @@ source myvenv/bin/activate # Mac
 
 ```
 pip install -r requirements.txt
-```
 
-- 프로젝트 생성
-
-```shell
-django-admin startproject mens
-cd mens
 ```
 
 - 서버 실행
